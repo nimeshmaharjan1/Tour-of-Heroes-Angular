@@ -1,0 +1,16 @@
+<h2>Heroes List</h2>
+<div class="row">
+    <div class="col-sm-3">
+        <ul class="heroes">
+            <li *ngFor="let item of heroes">
+                <button [class.selected]="item === selectedHero" type="button" (click)="onSelect(item)">
+                    <span class="badge">{{item.id}}</span>
+                    <span class="name">{{item.name}}</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <app-hero-detail [selectedHero] ="selectedHero"></app-hero-detail>
+    </div>
+</div>

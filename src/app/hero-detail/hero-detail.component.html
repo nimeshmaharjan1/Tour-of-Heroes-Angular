@@ -1,0 +1,16 @@
+<div class="card" *ngIf="selectedHero">
+    <div class="card-header">
+        <h2>{{selectedHero.name | uppercase}} Details</h2>
+    </div>
+    <div class="card-body">
+        <div>
+            <h5>
+                ID: {{selectedHero.id}}
+            </h5>
+        </div>
+        <div class="form-group">
+            <label for="hero-name">Hero name: </label>
+            <input class="form-control" id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+        </div>
+    </div>
+</div>
